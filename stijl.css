@@ -1,0 +1,195 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+   cursor: none;
+     }
+
+html {
+  font-family: Helvetica, sans-serif;
+  background: #0e1212;
+  padding: 1rem;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40rem;
+  padding: 0;
+  background: #0e1212;
+  border-radius: 2rem;
+
+}
+
+.iconheader {
+}
+
+.iconheader img{
+  width: 100px;
+  height: 100px;
+  padding: 2rem;
+}
+
+header {
+  background: ;
+  position:relative;
+}
+
+main {
+  height: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  padding: 2rem;
+}
+
+main div {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+footer {
+  padding: 2rem;
+}
+
+
+.icon {
+  border: 1rem;
+}
+
+.hamburger {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+.bar {
+  background-color: black;
+  width: 4rem;
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+nav {
+  font-size: 2.4rem;
+  display: none;
+}
+
+nav a {
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+.instagramprofile {
+  display: grid;
+  grid-template-columns: 6rem 6rem;
+  grid-template-rows: 2rem 2rem;
+  border: 0.1rem solid black;
+  width: 14rem;
+  height: 5rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.instagramprofile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 3rem;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.follow {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.naam {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255, 255, 0.1);
+  border: 1px solid rgba(255,255, 255, 0.5);
+  border-radius: 2rem;
+  pointer-events: none;
+  box-sizing: border-box;
+  transition: 0.05s;
+}
+
+
+.info {
+  margin-top: 2.4rem;
+  text-align: center;
+  background-image: url(fotos/instagramprofiel.jpg);
+  background-size: 20rem;
+  background-position: bottom, center;
+  background-repeat: no-repeat;
+  height: 23rem;
+}
+
+.info img {
+  width: 30rem;
+  margin-top: 2.4rem;
+  background-blend-mode: darken;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+p {
+  color: black;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+
+@supports (grid-area: auto) {
+	/* we weten hier: ondersteuning voor grid-layout */
+
+	@media (min-width: 60rem) {
+    body {
+      max-width: 60rem;
+    }
+
+		.hamburger {
+      display: none;
+    }
+
+    nav {
+      display: inline;
+      position: absolute;
+      top:6rem;
+      right: 3rem;
+    }
+
+    @media (min-width: 80rem) {
+      body {
+        max-width: 100%;
+      }
+
+      nav {
+        display: inline;
+        position: absolute;
+        top:6rem;
+        right: 3rem;
+      }
+	}
+
+}
